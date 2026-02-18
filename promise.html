@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Promise</title>
+</head>
+<body>
+<script>
+
+    function getData(callback) {
+    console.log("Getting data...");
+    callback();
+}
+
+    function showData() {
+    console.log("Data received");
+}
+
+    getData(showData);
+    const myPromise = new Promise((resolve, reject) => {
+    let success = true;
+
+    if (success) {
+    resolve("Promise success");
+    } else {
+    reject("Promise failed");
+    }
+});
+
+    myPromise
+    .then(msg => console.log(msg))
+    .catch(err => console.log(err));
+
+    const add = (a, b) => a + b;
+    console.log(add(10, 20));
+
+</script>
+
+</body>
+</html>

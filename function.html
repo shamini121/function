@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>syncfun and asyncfun</title>
+</head>
+
+<body>
+
+<script>
+function syncfun() {
+    console.log("hello customer");
+    console.log("hey! iam hear");
+    console.log("what's a problem");
+}
+    function asyncfun() {
+    console.log("Hello");
+
+    setTimeout(() => {
+        console.log("print after 2 sec");
+    }, 2000);
+
+    console.log("here a solution");
+    }
+
+syncfun();
+asyncfun();
+</script>
+
+</body>
+</html>
